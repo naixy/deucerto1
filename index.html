@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+        button {
+            font-family: 'Exo', sans-serif;
+        }
+
+        .purple1 {
+            position: absolute;
+            height: 400px;
+            width: 200px;
+            top: 100px;
+            left: 500px;
+            background-color: purple;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .purple2 {
+            position: absolute;
+            height: 400px;
+            width: 200px;
+            top: 100px;
+            left: 400px;
+            background-color: purple;
+            border: none;
+            border-radius: 50px;
+        }
+
+        .sign {
+            position: absolute;
+            height: 40px;
+            width: 120px;
+            top: 400px;
+            left: 500px;
+            background-color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .white {
+            position: absolute;
+            height: 400px;
+            width: 500px;
+            top: 100px;
+            background-color: gray;
+            border: none;
+            border-radius: 50px;
+        }
+
+        .email-input {
+            position: absolute;
+            height: 60px;
+            width: 240px;
+            top: 300px;
+            left: 80px;
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: text;
+        }
+
+        .password-input {
+            position: absolute;
+            height: 60px;
+            width: 240px;
+            top: 370px;
+            left: 80px;
+            background-color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: text;
+        }
+
+        .connect {
+            position: absolute;
+            height: 40px;
+            width: 120px;
+            top: 440px;
+            left: 140px;
+            background-color: purple;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .account {
+            position: absolute;
+            height: 60px;
+            width: 240px;
+            top: 200px;
+            left: 80px;
+            background-color: gray;
+            color: purple;
+            border: none;
+            font-size: 30px;
+        }
+
+        .sign:active {
+            transform: translateY(3px);
+        }
+
+        .connect:active {
+            transform: translateY(3px);
+        }
+    </style>
+</head>
+<body>
+    <button class="white"></button>
+    <button class="purple1" id="purple1"></button>
+    <button class="purple2" id="purple2"></button>
+    <button class="sign" id="sing">sign up</button>
+    <input type="text" class="email-input" placeholder="E-mail">
+    <button class="connect" id="connect" onclick="login()">Connect</button>
+    <input class="password-input" placeholder="Password">
+    <button class="account">Send your account</button>
+
+    <script>
+        function login() {
+            var email = document.querySelector('.email-input').value.trim(); // Obtém o valor do campo de e-mail
+            var password = document.querySelector('.password-input').value.trim(); // Obtém o valor do campo de senha
+
+            // Aqui você compararia os valores inseridos com os valores esperados
+            // Por exemplo, você pode ter valores esperados hardcoded ou obtidos de um banco de dados
+
+            var expectedEmail = "amominhamulher@gmail.com"; // E-mail esperado
+            var expectedPassword = "senha123"; // Senha esperada
+
+            var expectedEmail2 = "ayuri782@gmail.com";
+            var expectedPassword2 ="gostodelasanha";
+
+            var expectedEmail3 = "Beatrizlinda88@gmail.com";
+            var expectedPassword3 = "Beatrizdopaulo";
+
+            if (email === expectedEmail && password === expectedPassword) {
+                alert("Login successful!"); // Exibe uma mensagem de sucesso se o login for bem-sucedido
+            }
+
+            else if (email === expectedEmail2 && password === expectedPassword2) {
+                alert("Login successful!"); // Exibe uma mensagem de sucesso se o login for bem-sucedido
+            }
+
+            else if (email === expectedEmail3 && password === expectedPassword3) {
+                alert("Login successful!"); // Exibe uma mensagem de sucesso se o login for bem-sucedido
+            }
+            
+            else {
+                alert("Incorrect email or password. Please try again."); // Exibe uma mensagem de erro se o login falhar
+            }
+        }
+    </script>
+</body>
+</html>
